@@ -1,0 +1,9 @@
+[
+  "1:user:Dog:Retriever:3:Male:true:false:true:Friendly and playful.:Buddy:John Smith:john@example.com",
+  "2:user:Dog:Staffy:2:Female:false:true:true:Independent but affectionate:Stella:Jane Smith:janesmith@example.com",
+  "3:user:Dog:Setter:8:Male:true:true:true:Loyal and gentle.:Ruby:Emily Johnson:emily@example.com",
+  "4:user:Dog:Pug:10:Female:true:true:false:Fluffy and calm.:Bobby:Michael Brown:jessica@example.com",
+  "5:user:Cat:Abyssinian:2:female:true:true:true:Friendly but Independent:Bark:Jeffrey Doe:jeff@examples.ca",
+  ":user:Dog:Mix:3:male:true:true:false:pp:pp:pp:pp@gg.com",
+  "7:user:Dog:Mix:2:male:true:true:false:aa:aa:aa:aaaaaa@gmail.com"
+]

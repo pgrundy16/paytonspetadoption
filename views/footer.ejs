@@ -1,0 +1,24 @@
+    </div>
+    <footer>
+        <p>
+            <a href="#" onclick="showPrivacy()">Privacy Statement</a> |
+            <a href="#" onclick="showDisclaimer()">Disclaimer Statement</a>
+        </p>
+        <p id="copyright"></p>
+    </footer>
+    <script src="/scripts/timeScript.js"></script>
+    <script>
+        function showPrivacy() {
+            alert("Your information is safe with us. We do not sell or misuse any user data.");
+        }
+
+        function showDisclaimer() {
+            alert("Any pets listed on this website are entered by users of the website. The owner of this website is not responsible for any information shown about a specific pet.");
+        }
+
+        // Set copyright year
+        const year = new Date().getFullYear();
+        document.getElementById('copyright').innerHTML = `<em>Copyright ${year} Payton's Pet Adoption Service. All Rights Reserved.</em>`;
+    </script>
+</body>
+</html>

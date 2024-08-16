@@ -1,0 +1,18 @@
+<%- include('header') %>
+<div class="content">
+    <h1>Login</h1>
+    <form id="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <p class="description"><em>Username can contain letters and digits only.</em></p>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <p class="description"><em>Password must be at least 4 characters long, contain only letters and digits, and contain at least one letter and at least one digit.</em></p>
+
+        <input type="submit" value="Login">
+        <div id="error-message" style="color: red;"></div>
+    </form>
+</div>
+<%- include('footer') %>
+<script src="/scripts/loginScript.js"></script>

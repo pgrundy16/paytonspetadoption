@@ -1,0 +1,64 @@
+<%- include('header') %>
+<div class="content">
+    <h1>Have a Pet to Give Away?</h1>
+    <% if (session.loggedIn) { %>
+    <form id="giveaway-form" action="/give" method="POST">
+        <label for="pettype">Pet Type:</label>
+        <input type='radio' id="pettype-dog" name="pettype" value='Dog'>
+        <label for="pettype-dog">Dog</label>
+        <input type='radio' id="pettype-cat" name="pettype" value='Cat'>
+        <label for="pettype-cat">Cat</label><br>
+
+        <label for="breed">Breed:</label>
+        <select id="breed" name="breed">
+            <option value="Mix">Mix</option>
+            <option value="Abyssinian">Abyssinian</option>
+            <option value="Bengal">Bengal</option>
+            <option value="Pug">Pug</option>
+            <option value="Staffy">Staffy</option>
+            <option value="Setter">Setter</option>
+            <option value="Chihuahua">Chihuahua</option>
+            <option value="Retriever">Retriever</option>
+            <option value="Lab">Lab</option>
+        </select><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age"><br>
+
+        <label for="gender">Animal Gender:</label>
+        <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br>
+
+        <label for="getsalongdogs">Gets Along with Dogs:</label>
+        <input type="checkbox" id="getsalongdogs" name="getsalongdogs"><br>
+
+        <label for="getsalongcats">Gets Along with Cats:</label>
+        <input type="checkbox" id="getsalongcats" name="getsalongcats"><br>
+
+        <label for="suitablechildren">Suitable for Family with Small Children:</label>
+        <input type="checkbox" id="suitablechildren" name="suitablechildren"><br>
+
+        <label for="comments">Comments About the Pet:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br>
+
+        <label for="name">Pet's Name:</label>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="ownername">Current Owner's Full Name:</label>
+        <input type="text" id="ownername" name="ownername"><br>
+
+        <label for="owneremail">Current Owner's Email:</label>
+        <input type="text" id="owneremail" name="owneremail"><br>
+
+        <input type="submit" value="Submit">
+        <button type="button" onclick="clearForm()">Clear</button>
+        <div id="error-message" style="color: red;"></div>
+    </form>
+    <% } else { %>
+    <p>Please <a href="/login">log in</a> to submit pet information.</p>
+    <% } %>
+</div>
+<%- include('footer') %>
+<script src="/scripts/giveScript.js"></script>

@@ -1,0 +1,49 @@
+<%- include('header') %>
+<div class="contentFindPet">
+    <h1>Find a Dog/Cat</h1>
+    <form id="find-form">
+        <label for="pettype">Cat or Dog:</label>
+        <input type='radio' name="pettype" value='dog'> Dog
+        <input type='radio' name="pettype" value='cat'> Cat<br>
+        <label for="breed">Breed of Animal:</label>
+        <select id="breed" name="breed">
+            <option value="">Doesn't Matter</option>
+            <option value="Abyssinian">Abyssinian</option>
+            <option value="Bengal">Bengal</option>
+            <option value="Pug">Pug</option>
+            <option value="Staffy">Staffy</option>
+            <option value="Setter">Setter</option>
+            <option value="Chihuahua">Chihuahua</option>
+            <option value="Retriever">Retriever</option>
+            <option value="Lab">Lab</option>
+        </select><br>
+        <label for="age">Preferred Age of Animal:</label>
+        <select id="age" name="age">
+            <option value="any">Doesn't Matter</option>
+            <option value="puppy/kitten">Puppy/Kitten</option>
+            <option value="adult">Adult</option>
+            <option value="senior">Senior</option>
+        </select><br>
+        <label for="gender">Preferred Gender:</label>
+        <select id="gender" name="gender">
+            <option value="any">Doesn't Matter</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br>
+        <label>Needs to Get Along with:</label><br>
+        <input type="checkbox" id="getalongdogs" name="getalongdogs" value-"false">
+        <label for="getalongdogs">Dogs</label>
+        <input type="checkbox" id="getalongcats" name="getalongcats" value-"false">
+        <label for="getalongcats">Cats</label>
+        <input type="checkbox" id="getalongchildren" name="getalongchildren" value-"false">
+        <label for="getalongchildren">Children</label><br>
+        <input type="submit" value="Submit">
+        <button type="button" onclick="clearForm()">Clear</button>
+    </form>
+    <div id="error-message" style="color: red;"></div>
+    <div class="petContent">
+        <div id="pet-list"></div>
+    </div>
+</div>
+<%- include('footer') %>
+<script src="/scripts/findScript.js"></script>
